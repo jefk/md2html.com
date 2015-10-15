@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @doc = Doc.new
+    render :index, locals: { doc: Doc.new }
   end
 end
