@@ -3,3 +3,20 @@
  *= require_tree .
  *= require_self
  */
+
+main {
+  margin: 0 auto;
+  max-width: 40rem;
+  min-height: 100vh;
+  background: white;
+}
+
+.content {
+  padding: 2rem;
+}
+
+body {
+  background: #F2F2F2;
+  margin: 0;
+  padding: 0;
+}
