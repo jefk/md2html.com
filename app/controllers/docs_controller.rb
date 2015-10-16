@@ -9,12 +9,17 @@ class DocsController < ApplicationController
   end
 
   def show
-    render :show, locals: { doc: Doc.find_by(slug: params[:id]) }
+    doc = Doc.find_by slug: params[:id]
+    render html: markdown.render(doc.content).html_safe, layout: 'application'
   end
 
   private
 
   def doc_params
     params.require(:doc).permit(:slug, :content)
+  end
+
+  def markdown
+    Redcarpet::Markdown.new(Redcarpet::Render::HTML.new(filter_html: true))
   end
 end
