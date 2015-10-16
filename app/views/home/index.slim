@@ -3,7 +3,11 @@ h1 Convert Markdown to HTML
 
   .path
     = label_tag :slug, "md2html.com/"
-    = f.text_field :slug, placeholder: 'your-path'
+    = f.text_field :slug, placeholder: 'your-path', autofocus: true
 
   = f.text_area :content, size: '60x12', placeholder: '# Your Markdown'
   = f.submit 'Convert to HTML'
+
+p
+  = "Made (with haste) by "
+  a href="http://jefk.github.io/" jefk
