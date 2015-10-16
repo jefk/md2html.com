@@ -1,7 +1,11 @@
 class DocsController < ApplicationController
   def create
-    doc = Doc.create doc_params
-    redirect_to action: :show, id: doc.slug
+    doc = Doc.new doc_params
+    if doc.save
+      redirect_to action: :show, id: doc.slug
+    else
+      redirect_to :root, alert: doc.errors.full_messages
+    end
   end
 
   def show
