@@ -1,5 +1,9 @@
-h1 md2html
+h1 Convert Markdown to HTML
 = form_for doc do |f|
-  = f.text_field(:slug)
-  = f.text_area(:content, size: '60x12')
-  = f.submit('Create')
+
+  .path
+    = label_tag :slug, "md2html.com/"
+    = f.text_field :slug, placeholder: 'your-path'
+
+  = f.text_area :content, size: '60x12', placeholder: '# Your Markdown'
+  = f.submit 'Convert to HTML'

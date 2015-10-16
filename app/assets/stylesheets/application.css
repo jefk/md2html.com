@@ -20,3 +20,33 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.new_doc textarea {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.new_doc .path, .new_doc input[type=text] {
+  font-size: 1.5rem;
+}
+
+.new_doc input[type=text] {
+  border: 0;
+  border-bottom: 1px solid black;
+}
+
+.new_doc .path {
+  display: flex;
+  margin: 2rem 0;
+}
+
+.new_doc .path input {
+  flex: 1;
+}
+
+.new_doc input[type=submit] {
+  margin: 2rem 0;
+  width: 100%;
+  font-size: 1.5rem;
+}
