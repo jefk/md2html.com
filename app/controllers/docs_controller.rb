@@ -10,6 +10,7 @@ class DocsController < ApplicationController
 
   def show
     doc = Doc.find_by slug: params[:id]
+    redirect_to :root and return unless doc
     render html: markdown.render(doc.content).html_safe, layout: 'application'
   end
 
